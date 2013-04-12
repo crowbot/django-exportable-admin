@@ -5,8 +5,12 @@ setup(
     name = "django-exportable-admin",
     version = "1.1",
 
-    packages = ['django_exportable_admin'],
-
+    packages = ['django_exportable_admin', 'django_exportable_admin.templatetags'],
+    include_package_data = True,
+    package_data = {
+        'django_exportable_admin': [
+            'templates/django_exportable_admin/*.html',
+    ]},
     author = "Jay Wineinger",
     author_email = "jay.wineinger@gmail.com",
 
